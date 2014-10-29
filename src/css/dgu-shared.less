@@ -100,7 +100,7 @@ body {
 
 
 #blackbar {
-  background: #1C1D1D;
+  background: #FFFFFF;
   .container {
     position: relative;
     z-index: 10;
@@ -112,12 +112,12 @@ body {
     position: absolute;
     bottom: 0px;
     border: 7px solid transparent;
-    border-bottom-color: #8BC658;
+    border-bottom-color: #00698C;
     transition: right 0.5s;
-    @gap1: 65px;
-    @gap2: 63px;
-    @gap3: 73px;
-    @gap4: 239px;
+    @gap1: 102px;
+    @gap2: 111px;
+    @gap3: 118px;
+    @gap4: 250px;
     @gap5: 42px;
     @offset: 27px;
     &.position1 { right: @offset + @gap5 + @gap4 + @gap3 + @gap2 + @gap1; }
@@ -139,7 +139,7 @@ body {
     background-size: cover;
     display: block;
     width: 213px;
-    height: 39px;
+    height: 68px;
     margin-top: 16px;
     margin-bottom: 18px;
     margin-left: 30px;
@@ -155,7 +155,7 @@ body {
 }
 
 #greenbar {
-  background: #8BC658;
+  background: #00698C;
   padding: 5px 0;
   .subnav {
     margin: 0 0 0 0;
@@ -188,7 +188,7 @@ body {
   #greenbar {
     .subnav {
       display: none;
-      li { display: block; } 
+      li { display: block; }
       br { display: none; }
     }
   }
@@ -228,7 +228,7 @@ body {
     float: left;
     height: 30px;
     margin-left: 30px;
-    color: #fff;
+    color: #63635F; font-weight: bold;
   }
   .nav-search {
     @media(max-width: 560px) {
@@ -277,7 +277,7 @@ body {
 
 .footer {
     background: #E1E1E1;
-    border-top: 10px solid #8BC658;
+    border-top: 10px solid #00698C;
     border-bottom: 1px solid #ccc;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -906,7 +906,7 @@ div.reply {
       li a.active:hover,
       li a.active:focus,
       li.active-trail a {
-        background: #8BC658;
+        background: #00698C;
         text-shadow: none;
       }
     }
@@ -922,4 +922,7 @@ div.reply {
   text-indent: -9999px;
   vertical-align: text-bottom;
   width: 11px;
+}
+div#blackbar .form-control {
+  background-color: #F2F2F2;
 }

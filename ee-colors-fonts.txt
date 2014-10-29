@@ -1,0 +1,11 @@
+Blue: #00698C
+A bit darker blue: #005470
+Dark-gray: #7E7E79
+Light-gray: #EFEDE3
+
+Fonts:
+Museo (titles) ja Tahoma (content texts)
+Tahoma Normal
+Museo 300
+Museo 500
+Museo 700
