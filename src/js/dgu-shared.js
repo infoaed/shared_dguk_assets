@@ -38,7 +38,7 @@ function initNav() {
     //--  The navOpen behaviour is only visible on mobile.
     if (chevron.hasClass(chevronClass)) {
       window.navOpen = !window.navOpen;
-    } 
+    }
     else {
       window.navOpen = true
     }
@@ -66,63 +66,8 @@ function initNav() {
 }
 
 function comments() {
-    $('.replies-header').each(function(index) {
-        var comment_type = $(this).text();
-        $(this).prepend('<a class="comments-collapse expanded pull-right" href="#">Collapse all ' + comment_type.toLowerCase() + ' <i class="icon-collapse-top"></i></a>');
-    });
-
-    $('.comments-collapse').click(function(){
-        $(this).toggleClass('expanded');
-        if ($(this).hasClass('expanded')) {
-            $(this).parent().parent().find('.reply-body').show();
-            $(this).parent().parent().find('.reply').removeClass('collapsed');
-            $(this).parent().parent().find('.comment-collapse').addClass('expanded');
-            $(this).parent().parent().find('.comment-collapse').html('<i class="icon-collapse-top"></i>');
-            //$(this).html('Collapse all comments <i class="icon-collapse-top"></i>' + $(this).html());
-            $(this).html($(this).html().replace('Expand', 'Collapse'));
-            $(this).children('i').removeClass('icon-expand');
-            $(this).children('i').addClass('icon-collapse-top');
-        }
-        else {
-            $(this).parent().parent().find('.reply-body').hide();
-            $(this).parent().parent().find('.reply').addClass('collapsed');
-            $(this).parent().parent().find('.comment-collapse').removeClass('expanded');
-            $(this).parent().parent().find('.comment-collapse').html('<i class="icon-expand"></i>');
-            //$(this).html('Expand all comments <i class="icon-expand"></i>' + $(this).html() );
-            $(this).html($(this).html().replace('Collapse', 'Expand'));
-            $(this).children('i').removeClass('icon-collapse-top');
-            $(this).children('i').addClass('icon-expand');
-        }
-        return false;
-    });
-
-    $('body:not(.page-reply) .reply .inner').prepend('<a title="Collapse this comment" class="comment-collapse expanded" href="#"><i class="icon-collapse-top"></i></a>');
-    $('.comment-collapse').click(function(){
-        $(this).toggleClass('expanded');
-        $(this).parent().parent().toggleClass('collapsed');
-        if ($(this).hasClass('expanded')) {
-            $(this).parent().find('.reply-body').show();
-            $(this).html('<i class="icon-collapse-top"></i>');
-            $(this).prop('title', 'Collapse this comment');
-        }
-        else {
-            $(this).parent().find('.reply-body').hide();
-            $(this).html('<i class="icon-expand"></i>');
-            $(this).prop('title', 'Expand this comment');
-        }
-        return false;
-    });
-
-    $('body:not(.page-reply) .reply:not(.parent-0)').prepend('<a title="See start of thread" class="go-to-parent" href="#"><i class="icon-circle-arrow-up"></i></a>');
-    $('.go-to-parent').click(function(){
-        var parent = $(this).parent().attr("class").match(/parent-(\d*)/)[1];
-        $('html, body').animate({'scrollTop' : $('#reply-' + parent).offset().top - 50},800, 'swing', function(){
-            $('#reply-' + parent).fadeOut(100);
-            $('#reply-' + parent).fadeIn(200);
-        });
-        return false;
-    });
 }
+
 /*
  * New plugin: Equal height boxes.
  * When the parent container is resized (eg. browser resizes,
@@ -159,7 +104,7 @@ $(function() {
   });
 });
 
-/* 
+/*
  * New plugin: Hashtab
  */
 $(function() {
