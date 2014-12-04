@@ -26,6 +26,40 @@
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+  font-family: 'museo700';
+  src: url('../font/Museo700-Regular-webfont.eot');
+  src: url('../font/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/Museo700-Regular-webfont.woff2') format('woff2'),
+  url('../font/Museo700-Regular-webfont.woff') format('woff'),
+  url('../font/Museo700-Regular-webfont.ttf') format('truetype'),
+  url('../font/Museo700-Regular-webfont.svg#museo700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo500';
+  src: url('../font/Museo500-Regular-webfont.eot');
+  src: url('../font/Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/Museo500-Regular-webfont.woff2') format('woff2'),
+  url('../font/Museo500-Regular-webfont.woff') format('woff'),
+  url('../font/Museo500-Regular-webfont.ttf') format('truetype'),
+  url('../font/Museo500-Regular-webfont.svg#museo500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo300';
+  src: url('../font/Museo300-Regular-webfont.eot');
+  src: url('../font/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/Museo300-Regular-webfont.woff2') format('woff2'),
+  url('../font/Museo300-Regular-webfont.woff') format('woff'),
+  url('../font/Museo300-Regular-webfont.ttf') format('truetype'),
+  url('../font/Museo300-Regular-webfont.svg#museo300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
   -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
@@ -41,12 +75,16 @@
 p,blockquote,body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
-  font-family:'Open Sans',Helvetica Neue,Helvetica;
+  font-family: Tahoma, Geneva, sans-serif;
+// font-family:'Open Sans',Helvetica Neue,Helvetica;
+
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-top: 0px;
+  font-family: museo500;
 }
 
 img {
@@ -119,7 +157,7 @@ body {
     @gap3: 118px;
     @gap4: 250px;
     @gap5: 42px;
-    @offset: 27px;
+    @offset: -23px;
     &.position1 { right: @offset + @gap5 + @gap4 + @gap3 + @gap2 + @gap1; }
     &.position2 { right: @offset + @gap5 + @gap4 + @gap3 + @gap2; }
     &.position3 { right: @offset + @gap5 + @gap4 + @gap3; }
@@ -138,7 +176,7 @@ body {
     background-image: url('/assets/img/dgu-header-white.png');
     background-size: cover;
     display: block;
-    width: 213px;
+    width: 255px;
     height: 68px;
     margin-top: 16px;
     margin-bottom: 18px;
@@ -843,7 +881,8 @@ div.reply {
 }
 
 #toolbar {
-  background: #1c1d1d;
+//  background: #1c1d1d;
+  background: url("/assets/img/menuback.png") repeat-x scroll left bottom #101010;
   font: normal small "Lucida Grande",Verdana,sans-serif;
   * {
     border: 0;
@@ -877,7 +916,8 @@ div.reply {
     margin: 0;
   }
   div.toolbar-menu {
-    background: #1c1d1d;
+//    background: #1c1d1d;
+    background: url("/assets/img/menuback.png") repeat-x scroll left bottom #101010;
     padding: 2px 10px;
     margin: 0 auto;
     @media (min-width: 768px) {
