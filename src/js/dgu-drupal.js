@@ -63,3 +63,14 @@ $(function() {
     resizeChildren();
   });
 });
+$(function(){
+  var liitem = '<li id="pass_login_link"><a href="#" id="pass_login">Log in with Password</a></li>';
+  $('#digidoc-auth-service-wrapper').append(liitem);
+  $('#pass_login').click(function(e){
+    e.preventDefault();
+    $('.form-item-name').fadeToggle('500');
+    $('.form-item-pass').fadeToggle('500');
+    $('.form-submit').fadeToggle('500');
+    $('#main-content').toggleClass('bigger-main');
+  })
+});

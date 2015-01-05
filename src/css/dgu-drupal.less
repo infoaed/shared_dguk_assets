@@ -2377,7 +2377,7 @@ body{
 .introtext h2{
   font-size: 21px;
   text-transform: none !important;
-//  font-family: museo500 !important;
+  //  font-family: museo500 !important;
 }
 
 
@@ -2431,7 +2431,7 @@ body{
 }
 .middle_top .nav-search-inp{
   margin: auto;
-//  line-height: 70px;
+  //  line-height: 70px;
   width: 80%;
 }
 .middle_top .nav-search-inp button{
@@ -2442,7 +2442,7 @@ body{
 .md_left{
   padding-top: 20px;
 
-//  display: block;
+  //  display: block;
 }
 .md_left button{
   font-size: 14px !important;
@@ -2451,82 +2451,119 @@ body{
 
 
 .tabledrag-toggle-weight-wrapper {
-    display: none;
+  display: none;
 }
 
 div#edit-body-und-0-format-help {
-	display: none;
+  display: none;
 }
 
 #id-card-login-link a {
-	background-image: url("/assets/img/logo_id.gif");
-	display: block;
-	text-decoration: none;
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	min-height: 25px;
-	padding-left: 100px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	border: 0px none;
-	margin: 0px;
+  background-image: url("/assets/img/logo_id.gif");
+  display: block;
+  text-decoration: none;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  min-height: 25px;
+  padding-left: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0px none;
+  margin: 0px;
+}
+
+#pass_login_link a{
+  background-image: url("/assets/img/lock_icon.png");
+  display: block;
+  text-decoration: none;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  min-height: 25px;
+  padding-left: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0px none;
+  margin: 0px;
 }
 
 #mobiil-id-link a {
-    background-image: url("/assets/img/logo_m-id.gif");
-    display: block;
-    text-decoration: none;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    min-height: 25px;
-    padding-left: 100px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: 0px none;
-    margin: 0px;
+  background-image: url("/assets/img/logo_m-id.gif");
+  display: block;
+  text-decoration: none;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  min-height: 25px;
+  padding-left: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0px none;
+  margin: 0px;
 }
 
 #digidoc-auth-service-wrapper {
-	list-style: outside none none;
-	padding-left: 0;
-    float: left;
-    clear: both;
+  list-style: outside none none;
+  padding-left: 0;
+  float: left;
+  clear: both;
 }
 
 div#login_hints {
-	float: left;
-	width: 40%;
+  float: left;
 }
 
-form#user-login div.form-type-textfield {
-	float: right;
+form#user-login div.form-item-name {
+  float: left;
+  position: absolute;
+  bottom: -85px;
+  width: 50%;
 }
 
 form#user-login div.form-type-password {
-    float: right;
+  float: right;
+  position: absolute;
+  bottom: -85px;
+  right: 50px;
+  width: 50%;
 }
 
+#edit-submit{
+  position: absolute;
+  bottom: -38px;
+  right: 70px;
+}
+
+
 form#user-login #edit-submit {
-    float: right;
-    clear: right;
+  float: right;
+  clear: right;
 }
 
 div#mobiil-id-auth-wrapper {
-	float: left;
-	clear: left;
+  float: left;
+  clear: left;
 }
 
 div#digidoc-auth-service-mobiil_id {
-	float: left;
-	clear: both;
-	margin: 20px 0 0 0;
+  float: left;
+  clear: both;
+  margin: 20px 0 0 0;
 }
 
 a#edit-mobiil-id-auth {
-	padding-right: 20px;
+  padding-right: 20px;
 }
 
 div#mobiil-id-instructions {
-	font-style: italic;
-	padding-top: 30px;
+  font-style: italic;
+  padding-top: 30px;
+}
+
+//login box total makeover
+
+.form-item-name, .form-item-pass, .form-submit{
+  display: none;
+}
+//toggle main content bigger
+.bigger-main{
+  height: 500px;
 }
