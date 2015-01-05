@@ -18,13 +18,13 @@ function useFancyboxForScreenshots(i,screenshotContainer) {
   var f = $('.fancybox');
 
   // Generate screenshot thumbnails
-  $.each(drupal_screenshots, function(i,x) { 
+  $.each(drupal_screenshots, function(i,x) {
     var html = ('\
       <a class="screenshot thumbnail" rel="group" href="'+x+'">\
         <img src="'+x+'" alt="" />\
       </a>\
-    '); 
-    $(html).appendTo(f); 
+    ');
+    $(html).appendTo(f);
   })
   // Clearfix floating screenshots
   $('<div class="clearfix"/>').appendTo(f);
@@ -34,14 +34,14 @@ function useFancyboxForScreenshots(i,screenshotContainer) {
 };
 
 
-/* 
+/*
  * New plugin: Equal height boxes.
  * When the window container is resized, all elements in group are made equal height.
  */
 $(function() {
   var w = $(window);
   var page = $('.page');
-  groups = [ 
+  groups = [
     $('.pane-latest-datasets,.pane-latest-blogs-and-forums'),
   ];
   $.each(groups, function(i,group) {
@@ -54,7 +54,7 @@ $(function() {
       group.height('auto');
       // Affect only browser windows
       if (w.width()>=768) {
-        var maxHeight = 0; 
+        var maxHeight = 0;
         group.each(function(i,x){ maxHeight=Math.max(maxHeight,$(x).height())});
         group.height(maxHeight);
       }
@@ -64,7 +64,7 @@ $(function() {
   });
 });
 $(function(){
-  var liitem = '<li id="pass_login_link"><a href="#" id="pass_login">Log in with Password</a></li>';
+  var liitem = '<li id="pass_login_link"><a href="#" id="pass_login">Log sisse salas&#245;naga (portaali haldajatele)</a></li>';
   $('#digidoc-auth-service-wrapper').append(liitem);
   $('#pass_login').click(function(e){
     e.preventDefault();
