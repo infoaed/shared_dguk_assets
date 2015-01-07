@@ -2530,7 +2530,7 @@ form#user-login div.form-type-password {
   width: 50%;
 }
 
-#edit-submit{
+form#user-login #edit-submit{
   position: absolute;
   bottom: -38px;
   right: 70px;
@@ -2583,9 +2583,18 @@ div#mobiil-id-instructions {
 
 //login box total makeover
 
-.form-item-name, .form-item-pass, .form-submit{
+form#user-login .form-item-name {
   display: none;
 }
+
+form#user-login .form-item-pass {
+  display: none;
+}
+
+form#user-login .form-submit {
+	display: none;
+}
+
 //toggle main content bigger
 .bigger-main{
   height: 500px;
