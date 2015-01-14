@@ -2530,7 +2530,7 @@ form#user-login div.form-type-password {
   width: 50%;
 }
 
-#edit-submit{
+form#user-login #edit-submit{
   position: absolute;
   bottom: -38px;
   right: 70px;
@@ -2551,10 +2551,6 @@ form#user-login div.form-type-password {
     position: absolute;
   }
 }
-
-
-
-
 
 form#user-login #edit-submit {
   float: right;
@@ -2583,10 +2579,28 @@ div#mobiil-id-instructions {
 
 //login box total makeover
 
-.form-item-name, .form-item-pass, .form-submit{
+form#user-login .form-item-name {
   display: none;
 }
+
+form#user-login .form-item-pass {
+  display: none;
+}
+
+form#user-login .form-submit {
+	display: none;
+}
+
 //toggle main content bigger
 .bigger-main{
   height: 500px;
+}
+
+// We dont want our users to use or see the quick edit tabs on forum pages.
+li.quick-edit {
+    display: none;
+}
+
+div#field-reply-comment-add-more-wrapper div.filter-help {
+	display: none;
 }
