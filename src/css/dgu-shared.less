@@ -896,7 +896,7 @@ div.reply {
     outline: 0;
     padding: 0;
     text-align: left;
-    vertical-align: baseline;
+//    vertical-align: baseline;
   }
   ul li {
     float: left;
@@ -959,6 +959,7 @@ div.reply {
   }
 }
 #toolbar-home a span {
+  background: url(/modules/toolbar/toolbar.png) no-repeat 0 -45px;
   display: block;
   height: 14px;
   margin: 3px 0px;
@@ -994,40 +995,54 @@ div#blackbar .form-control {
 }
 
 //
-// The menu shown as the top-most thing when user is NOT logged in. Basically substitutes the usual toolbar.
+// The menu shown as the top-most thing. Basically substitutes the usual toolbar.
 //
 
-.ourmenu{
-  width: 100%;
-  height: 24px;
-  background-image:url("/assets/img/menuback.png");
-}
-.menucontainer{
-  max-width: 1170px;
-  margin: 0 auto;
-  height: 24px;
-}
 .menulogin{
   float: right;
-  line-height: 24px;
-  margin-right: 12px;
+  margin-left: 1em;
 }
 .menulogin a{
-  font-family: Tahoma,Verdana,Segoe,sans-serif;
-  font-size: 12px;
   color: #fff;
   text-decoration: none;
 }
-.menulogin a::before{
-  width: 20px;
-  height: 20px;
-  content: url("/assets/img/icon-log-in-avatar.png");
+.menulogin img{
+  margin-right: 0.3em;
 }
-ul#toolbar-user a[href='/user'] {
-  pointer-events: none;
-  cursor: default;
+
+//
+// Language switcher part of the menu.
+//
+
+div#block-locale-language-content.block h2 { display:none; }
+ul.language-switcher-locale-url { padding:0; border:0; margin:0; margin-left: 1em; list-style: none; }
+ul.language-switcher-locale-url li {display: inline; margin-left: 0.5em;}
+
+.menulanguage{
+  float: right;
 }
-ul#toolbar-user a[disabled] {
-  pointer-events: none;
-  cursor: default;
+.menulanguage a{
+  color: #fff;
+  text-decoration: none;
+}
+
+//
+// Shared disabling links with Drupal.
+//
+a[disabled] {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+//
+// Delcare allcaps as style, not as content.
+//
+
+.allcapsmenu {
+  text-transform: uppercase;
+}
+
+.allcapsbutton {
+  text-transform: uppercase;
 }
