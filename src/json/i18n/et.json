@@ -1,0 +1,12 @@
+{"values":{
+	"Results": "Tulemust",
+	"Publishers": "Teabevaldajat",
+	"Start typing a name...": "Alusta nime kirjutamist...",
+	"Click on a series below to isolate its graph:": "Kliki graafiku nimel, et seda eraldi vaadata:",
+	"Your browser does not support vector graphics.": "Teie brauser ei toeta vektorgraafikat. Graafikut ei saa kuvada.",
+	"There is not enough data to render a graph.": "Graafiku kuvamiseks pole piisavalt andmeid.",
+	"(No graphs can be rendered)": "(Graafikut ei saa kuvada)",
+	"(Graph not available)": "(Graafik pole saadaval)",
+	"Log in using a password (for administrators)": "Logi sisse salas&#245;naga (portaali haldajatele)"
+	}
+}

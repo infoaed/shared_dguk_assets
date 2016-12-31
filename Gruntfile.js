@@ -28,7 +28,14 @@ module.exports = function(grunt) {
         cwd: 'src/img/',
         src: '*.gif',
         dest: 'assets/img',
-      }
+      },
+      json: {
+        expand: true,
+        cwd: 'src/json/',
+        src: '**/*.json',
+        dest: 'assets/json/',
+      },
+      
     },
     uglify: {
       //options: { beautify: true, mangle: false, compress: false, }, // <-- DEBUG MODE
@@ -39,6 +46,10 @@ module.exports = function(grunt) {
       dgu_shared_js: {
         src: 'src/js/dgu-shared.js',
         dest: 'assets/js/dgu-shared.min.js',
+      },
+      odp_ee_i18n_js: {
+        src: 'src/js/odp-ee-i18n.js',
+        dest: 'assets/js/odp-ee-i18n.min.js',
       },
       respondjs: {
         src: 'src/js/respond.src.js',
@@ -105,6 +116,14 @@ module.exports = function(grunt) {
       scripts_shared: {
         files: 'src/js/dgu-shared.js',
         tasks: 'uglify:dgu_shared_js',
+      },
+      scripts_odp_ee_i18n: {
+        files: 'src/js/odp-ee-i18n.js',
+        tasks: 'uglify:odp_ee_i18n.js',
+      },
+      json: { 
+        files: 'src/json/**/*.json',
+        tasks: 'copy:json'
       }
     },
     imagemin: {

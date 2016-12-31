@@ -63,8 +63,9 @@ $(function() {
     resizeChildren();
   });
 });
+
 $(function(){
-  var liitem = '<li id="pass_login_link"><a href="#" id="pass_login">Log sisse salas&#245;naga (portaali haldajatele)</a></li>';
+  var liitem = '<li id="pass_login_link"><a href="#" id="pass_login">' + __('Log in using a password (for administrators)') + '</a></li>';
   $('#digidoc-auth-service-wrapper').append(liitem);
   $('#pass_login').click(function(e){
     e.preventDefault();
