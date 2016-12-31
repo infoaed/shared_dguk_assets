@@ -1,5 +1,5 @@
 (function() {
-  var Translator, i18n, translator,
+  var Translator, __, translator,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Translator = (function() {
@@ -10,15 +10,29 @@
         contexts: []
       };
       this.globalContext = {};
-      $.ajax("/scripts/json/i18n/" + document.documentElement.lang + ".json").done(function(text){
-            i18n.translator.add(text);
-            str = "Publishers"
-            console.log("Test: " + str + " -> " + i18n(str));
-      })
-      .fail(function(jqxhr, textStatus, error) {
-        var err = textStatus + ", " + error;
-        console.log("Request Failed: " + err);
-      });
+
+      /* load JSON translations for the document */
+      var jsonData;
+      var url = "/assets/json/i18n/" + document.documentElement.lang + ".json";
+
+      var xhr = new XMLHttpRequest();
+      
+      xhr.onreadystatechange = function()
+      {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            jsonData = JSON.parse(xhr.responseText);
+            __.translator.add(jsonData);
+            console.log("simple js i18n started!");
+          } else {
+            console.log("simple js i18n err: " + xhr.status);
+          }
+        }
+      };
+      
+      xhr.open("GET", url, true);
+      xhr.send();
+      
     }
 
     Translator.prototype.translate = function(text, defaultNumOrFormatting, numOrFormattingOrContext, formattingOrContext, context) {
@@ -58,8 +72,8 @@
         }
       }
       if (isObject(text)) {
-        if (isObject(text['i18n'])) {
-          text = text['i18n'];
+        if (isObject(text['__'])) {
+          text = text['__'];
         }
         return this.translateHash(text, context);
       } else {
@@ -219,22 +233,22 @@
 
   translator = new Translator();
 
-  i18n = translator.translate;
+  __ = translator.translate;
 
-  i18n.translator = translator;
+  __.translator = translator;
 
-  i18n.create = function(data) {
+  __.create = function(data) {
     var trans;
 
     trans = new Translator();
     if (data != null) {
       trans.add(data);
     }
-    trans.translate.create = i18n.create;
+    trans.translate.create = __.create;
     return trans.translate;
   };
 
-  (typeof module !== "undefined" && module !== null ? module.exports = i18n : void 0) || (this.i18n = i18n);
+  (typeof module !== "undefined" && module !== null ? module.exports = __ : void 0) || (this.__ = __);
 
 }).call(this);
 
