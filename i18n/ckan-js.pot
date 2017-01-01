@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.2b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-01-01 19:33+0200\n"
+"POT-Creation-Date: 2017-01-02 00:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,16 +37,78 @@ msgstr ""
 msgid "Click on a series below to isolate its graph:"
 msgstr ""
 
-#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-publisher-index.min.js:33
-msgid "start typing a name..."
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-ckan-application.min.js:570
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu.js:661
+msgid "URL is too short."
 msgstr ""
 
-#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-publisher-index.min.js:40
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-ckan-application.min.js:572
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu.js:664
+msgid "This is the current URL."
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-ckan-application.min.js:574
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu.js:667
+msgid "Checking..."
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-ckan-application.min.js:598
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu.js:696
+msgid "This URL is available!"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-ckan-application.min.js:600
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu.js:698
+msgid "This URL is not available."
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu-publisher-index.js:33
+msgid "Start typing a name..."
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu-publisher-index.js:40
 msgid "Publishers"
 msgstr ""
 
-#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/public/scripts/dgu-publisher-index.min.js:49
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/dgu-publisher-index.js:49
 msgid "Results"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:39
+msgid "Loading ..."
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:45
+msgid "Grid"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:52
+msgid "Graph"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:59
+msgid "Map"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:210
+msgid "Preview not available for data type:"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:230
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:251
+msgid "Request Error"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:231
+msgid "Dataproxy server did not respond after"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:231
+msgid "seconds"
+msgstr ""
+
+#: i18n-ext/ckanext-dgu/ckanext/dgu/theme/src/scripts/recline_pack/dgu-recline-integration.js:252
+msgid "There was an error processing the request"
 msgstr ""
 
 #: src/js/dgu-drupal.js:68
