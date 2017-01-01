@@ -28,14 +28,7 @@ module.exports = function(grunt) {
         cwd: 'src/img/',
         src: '*.gif',
         dest: 'assets/img',
-      },
-      json: {
-        expand: true,
-        cwd: 'src/json/',
-        src: '**/*.json',
-        dest: 'assets/json/',
-      },
-      
+      },      
     },
     uglify: {
       //options: { beautify: true, mangle: false, compress: false, }, // <-- DEBUG MODE
@@ -121,9 +114,9 @@ module.exports = function(grunt) {
         files: 'src/js/odp-ee-i18n.js',
         tasks: 'uglify:odp_ee_i18n.js',
       },
-      json: { 
-        files: 'src/json/**/*.json',
-        tasks: 'copy:json'
+      po: { 
+        files: 'i18n/**/*.po',
+        tasks: 'po2json'
       }
     },
     imagemin: {
@@ -147,6 +140,21 @@ module.exports = function(grunt) {
         ]
       },
     },
+    po2json: {
+     options: {
+        singleFile: true,
+        stringOnly: true,
+        format: 'mf'
+      },
+      all: {
+        expand: true,
+        src: 'i18n/**/*.po',
+        dest: 'assets/json/i18n',
+        rename: function(dest, src) {
+            return dest + src.substring(src.indexOf('/'), src.indexOf('/LC_MESSAGES/')) + '.json';
+        }        
+      }
+    },
     timestamp: {
       build: {
         dest: 'assets/timestamp'
@@ -163,10 +171,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-po2json');
 
   // Default task(s).
   grunt.registerTask('styles', ['less','timestamp']);
   grunt.registerTask('scripts', ['copy:jquery','uglify','timestamp']);
   grunt.registerTask('images', ['copy:gifs','imagemin',]);
-  grunt.registerTask('default', ['styles','scripts','copy','imagemin','timestamp']);
+  grunt.registerTask('i18n', ['po2json',]);
+  grunt.registerTask('default', ['po2json','styles','scripts','copy','imagemin','timestamp']);
 };
